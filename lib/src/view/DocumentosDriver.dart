@@ -1,4 +1,5 @@
-import 'dart:ffi';
+
+import 'package:LuConductora/src/view/LicenciaDriver.dart';
 import 'package:beauty_textfield/beauty_textfield.dart';
 import 'package:bouncing_widget/bouncing_widget.dart';
 import 'package:flutter/material.dart';
@@ -155,8 +156,12 @@ class _DocumentosDriverState extends State<DocumentosDriver> {
                  BouncingWidget(
                     duration: Duration(milliseconds: 100),
                     scaleFactor: 1.5,
-                    onPressed: () {
-                    },
+                   onPressed: () {
+                        Navigator.push(
+                            context, 
+                            MaterialPageRoute(
+                              builder: (context)=> LicenciaDriver()));
+                      },
                     child: Card(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(50.0),
